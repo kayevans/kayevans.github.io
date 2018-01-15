@@ -47,7 +47,16 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-
-    </script>
+        $(document).ready(function() {
+          //get a random color between 0 and 255
+          function getRandomColor() {
+            return Math.floor(Math.random() * 255);
+          }
+          var randomColor = $(".randomColor");
+          $.each(randomColor, function(index, item) {
+            $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+          })
+    })
+  </script>
   </body>
 </html>
