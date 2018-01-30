@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MY FOUR ROWS</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style media="screen">
+      .height1{
+        height: 100px;
+      }
+      .height2{
+        height: 200px;
+      }
+      .relative{
+        position: relative;
+      }
+      .absolute{
+        max-width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .flexCenter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .flexSpaceAround{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .flexSpaceBetween{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .flexPhoto{
+        max-width: 100%;
+        max-height: 80%;
+      }
+      .flexPhotoSpace{
+        max-width: 18%;
+        max-height: 80%;
+      }
+      p{
+        text-align: center;
+        font-size: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 height1 randomColor">
+          <p>LOGOS</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 height2 relative randomColor">
+          <img class="absolute" src="img/netflix.png" alt="netflix logo">
+        </div>
+        <div class="col-md-4 height2 relative randomColor">
+          <img class="absolute" src="img/intellogo.png" alt="intellogo">
+
+        </div>
+        <div class="col-md-4 height2 relative randomColor">
+          <img class="absolute" src="img/citrus.png" alt="citrus logo">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 height2 flexCenter randomColor">
+            <img class="flexPhoto" src="img/amazon.png" alt="amazon logo">
+        </div>
+        <div class="col-md-4 height2 flexCenter randomColor">
+          <img class="flexPhoto" src="img/puma.png" alt="puma logo">
+        </div>
+        <div class="col-md-4 height2 flexCenter randomColor">
+          <img class="flexPhoto" src="img/nutella.png" alt="nutella logo">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 height2 flexSpaceAround randomColor">
+          <img class="flexPhotoSpace" src="img/facebook.png" alt="facebook logo">
+          <img class="flexPhotoSpace" src="img/google.png" alt="google logo">
+          <img class="flexPhotoSpace" src="img/twitter.png" alt="twitter logo">
+          <img class="flexPhotoSpace" src="img/playstation.png" alt="playstation logo">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 flexSpaceBetween height2 randomColor">
+          <img class="flexPhotoSpace" src="img/wonderwoman.png" alt="wonderwoman logo">
+          <img class="flexPhotoSpace" src="img/batman.png" alt="batman logo">
+          <img class="flexPhotoSpace" src="img/greenlantern.png" alt="greenlantern logo">
+          <img class="flexPhotoSpace" src="img/superman.png" alt="superman logo">
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+          //  when document is loaded
+        $(document).ready(function() {
+          // this function gets a random color between 0 and 255
+          function getRandomColor() {
+            return Math.floor(Math.random() * 255);
+          }
+          // get all the elements (divs) with class randomColor
+          var randomColor = $(".randomColor");
+          //loop through all elements
+          //for each element change css background color to RGB+ 3 random colors
+          $.each(randomColor, function(index, item) {
+            $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+          })
+    })
+    </script>
+  </body>
+</html>

@@ -96,6 +96,48 @@
       myFunctionWithParameter("Kay");
       myFunctionWithParameter("Evans");
     */
+    // variables defined with var keyword
+
+    // Boolean values are true or false
+    var myOnOff = true;
+    var isDayTime = false;
+
+    //number values
+    var salary= 100000;
+    var carPrice = 25000.25;
+
+    //text or string values
+    var emailAddress = "kay@guelphhumber.ca";
+    var sentence = 'The Judgement of Paris';
+
+    var taxes = 25000;
+
+    console.log("My take home pay is "+ (salary-taxes));
+
+    console.log("a bunch of info: "+ salary + " and " + carPrice + " and even more " + isDayTime);
+
+    var myConcatenation = "a bunch of info: "+ salary + " and " + carPrice + " and even more " + isDayTime;
+
+    console.log(myConcatenation);
+
+    function writeToConsole(myString){
+      console.log(myString);
+    }
+
+    writeToConsole(myConcatenation);
+    writeToConsole("3" + myConcatenation);
+
+    var bodyParts = {
+      female: "vagina",
+      male: "dick",
+      arm: "stickWithHand",
+    }
+
+    alert(bodyParts.arm);
+
+
+
+
     </script>
   </body>
 </html>
