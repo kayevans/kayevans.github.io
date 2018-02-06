@@ -17,8 +17,15 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style media="screen">
+      @import url('https://fonts.googleapis.com/css?family=Caveat|Raleway:200,400');
+      body{
+        font-family: 'Caveat', cursive;
+        font-size: 50px;
+        color: #2DC2BD;
+      }
+
       .height1{
-        height: 100px;
+        height: 120px;
       }
       .height2{
         height: 600px;
@@ -49,11 +56,19 @@
       }
 
       a{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        font-size: 30px;
         color: black;
       }
 
+      a:hover{
+        text-decoration: none;
+        color: white;
+      }
+
       .header{
-        line-height: 100px;
+        line-height: 120px;
       }
 
       .flexSingleItem{
@@ -65,15 +80,19 @@
         max-width: 50%;
       }
 
-      .smallerImg{
-        max-width: 50%;
+      .purple{
+        background-color: #E9D6FF;
+      }
+
+      .blue{
+        background-color: #E5FFFD;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-12 height1 header">
+        <div class="col-md-12 purple height1 header">
           <ul class="flexSpaceAround">
             <li><a href="#">HOME</a></li>
             <li><a href="#">GALLERY</a></li>
@@ -95,47 +114,51 @@
             </div>
           </div>
         </div>
-        <div class="col-md-8 height2 randomColor">
+        <div class="col-md-8 height2">
           <div class="row">
-            <div class="col-md-6 height3 flexSingleItem randomColor">
-              <div>
+            <div class="col-md-6 height3 flexSingleItem">
                   <img class="img" src="img/ocean1.jpg" alt="ocean">
-              </div>
             </div>
-            <div class="col-md-6 height3 flexSingleItem randomColor">
+            <div class="col-md-6 height3 flexSingleItem blue">
               <div>
-                also centered
+                immense
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6 height3 randomColor">
-
+            <div class="col-md-6 height3 flexSingleItem blue">
+              <div>
+                peaceful
+              </div>
             </div>
-            <div class="col-md-6 height3 randomColor">
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 height3 randomColor">
-
-            </div>
-            <div class="col-md-6 height3 randomColor">
-
+            <div class="col-md-6 height3 flexSingleItem">
+                  <img class="img" src="img/ocean2.jpg" alt="ocean">
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6 height3 randomColor">
-
+            <div class="col-md-6 height3 flexSingleItem">
+                  <img class="img" src="img/ocean3.jpg" alt="ocean">
             </div>
-            <div class="col-md-6 height3 randomColor">
-
+            <div class="col-md-6 height3 flexSingleItem blue">
+              <div>
+                beautiful
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 height3 flexSingleItem blue">
+              <div>
+                serene
+              </div>
+            </div>
+            <div class="col-md-6 height3 flexSingleItem">
+                  <img class="img" src="img/ocean4.jpg" alt="ocean">
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 height1 randomColor">
+        <div class="col-md-12 height1 purple">
 
         </div>
       </div>
