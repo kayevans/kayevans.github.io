@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="uth-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tables</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style media="screen">
+      .height1{
+        height: 80px;
+      }
+      /* .height2{
+        height: 500px;
+      } */
+      .height3{
+        height: 400px;
+      }
+      .flexCenter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      ul{
+        height: 80px;
+        list-style-type: none;
+      }
+
+      a{
+        color: black;
+      }
+
+      .lightBlue{
+        background-color: #CCFFFF;
+      }
+
+      .flexAround{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      h1, h2{
+        text-align: center;
+      }
+      .rings{
+        padding-top: 50px;
+        max-width: 30%;
+      }
+      .flag{
+        max-width: 10%;
+      }
+
+      th{
+        text-align: center;
+      }
+
+      .trees{
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 height3">
+          <div class="flexCenter">
+            <img class="rings" src="img/rings.png" alt="olympic rings">
+          </div>
+          <h1>PYEONGCHANG OLYMPICS 2018</h1>
+          <h2>Men's Slopstyle Snowboarding Final Results</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 height1 lightBlue">
+          <ul class="flexAround">
+            <li><a href="#">RESULTS</a></li>
+            <li><a href="#">JUDGES</a></li>
+            <li><a href="#">BIOS</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 height2">
+          <img class="trees" src="img/wintertrees.jpg" alt="snowy trees">
+        </div>
+        <div class="col-md-8 height2">
+          <table class="table table-striped table-hover">
+            <tr>
+              <th>Rank</th>
+              <th>Country</th>
+              <th>Name</th>
+              <th>Run 1</th>
+              <th>Run 2</th>
+              <th>Run 3</th>
+              <th>Best Run</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <img class="flag" src="img/america.png" alt="american flag">
+                USA
+              </td>
+              <td>Redmond Gerard</td>
+              <td>43.33</td>
+              <td>46.40</td>
+              <td>87.16</td>
+              <td>87.16</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <img class="flag" src="img/canada.png" alt="canadian flag">
+                CAN
+              </td>
+              <td>Max Parrot</td>
+              <td>45.13</td>
+              <td>49.48</td>
+              <td>86.00</td>
+              <td>86.00</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <img class="flag" src="img/canada.png" alt="canadian flag">
+                CAN
+              </td>
+              <td>Mark McMorris</td>
+              <td>75.30</td>
+              <td>85.20</td>
+              <td>60.68</td>
+              <td>85.20</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>
+                <img class="flag" src="img/norway.png" alt="norwegian flag">
+                NOR
+              </td>
+              <td>Staale Sandbech</td>
+              <td>44.81</td>
+              <td>81.01</td>
+              <td>38.13</td>
+              <td>81.01</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>
+                <img class="flag" src="img/newzealand.png" alt="new zealand flag">
+                NZL
+              </td>
+              <td>Carlos Garcia Knight</td>
+              <td>78.60	</td>
+              <td>52.98</td>
+              <td>24.35</td>
+              <td>78.60</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>
+                <img class="flag" src="img/norway.png" alt="norwegian flag">
+                NOR
+              </td>
+              <td>Marcus Kleveland</td>
+              <td>77.76</td>
+              <td>43.71</td>
+              <td>37.18</td>
+              <td>77.76</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>
+                <img class="flag" src="img/canada.png" alt="canadian flag">
+                CAN
+              </td>
+              <td>Tyler Nicholson</td>
+              <td>36.18</td>
+              <td>76.41</td>
+              <td>76.15</td>
+              <td>76.41</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>
+                <img class="flag" src="img/norway.png" alt="norwegian flag">
+                NOR
+              </td>
+              <td>Torgeir Bergrem</td>
+              <td>58.80</td>
+              <td>75.80</td>
+              <td>60.03</td>
+              <td>75.80</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>
+                <img class="flag" src="img/sweden.png" alt="swedish flag">
+                SWE
+              </td>
+              <td>Niklas Mattsson</td>
+              <td>38.43</td>
+              <td>74.71</td>
+              <td>42.48</td>
+              <td>74.71</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>
+                <img class="flag" src="img/belgium.png" alt="belgian flag">
+                BEL
+              </td>
+              <td>Seppe Smits</td>
+              <td>31.11</td>
+              <td>69.03</td>
+              <td>66.18</td>
+              <td>69.03</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>
+                <img class="flag" src="img/canada.png" alt="canadian flag">
+                CAN
+              </td>
+              <td>Sebastien Toutant</td>
+              <td>33.66</td>
+              <td>57.23</td>
+              <td>61.08</td>
+              <td>61.08</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>
+                <img class="flag" src="img/norway.png" alt="norwegian flag">
+                NOR
+              </td>
+              <td>Mons Roisland</td>
+              <td>DNS</td>
+              <td>DNS</td>
+              <td>DNS</td>
+              <td>DNS</td>
+            </tr>
+
+          </table>
+
+        </div>
+        <div class="col-md-2 height2">
+          <img class="trees" src="img/wintertrees.jpg" alt="snowy trees">
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12 height1 lightBlue">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+          //  when document is loaded
+        $(document).ready(function() {
+          // this function gets a random color between 0 and 255
+          function getRandomColor() {
+            return Math.floor(Math.random() * 255);
+          }
+          // get all the elements (divs) with class randomColor
+          var randomColor = $(".randomColor");
+          //loop through all elements
+          //for each element change css background color to RGB+ 3 random colors
+          $.each(randomColor, function(index, item) {
+            $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+          })
+    })
+    </script>
+  </body>
+</html>
