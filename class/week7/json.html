@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON Activity</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Raleway:100,300,400,500');
+    .height1 {
+      height: 250px;
+    }
+
+    .height2 {
+      height: 70px;
+    }
+
+    .height3 {
+      height: 500px;
+    }
+
+    .gold{
+      background-color: 	#CFB53B;
+    }
+
+    h1{
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      text-transform: uppercase;
+      font-size: 90px;
+      padding-top: 20px;
+    }
+
+    h1, h2{
+      text-align: center;
+    }
+
+    h2, .flex a{
+      font-family:'Playfair Display', serif;
+      font-weight: 400;
+    }
+
+    h2{
+      font-size: 25px;
+    }
+
+
+
+    img{
+      max-width: 50%;
+    }
+
+    table, th{
+      text-align: center;
+    }
+
+    th{
+      text-transform: uppercase;
+    }
+
+    .flex{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .flex a{
+      color: black;
+      text-transform: uppercase;
+      font-size: 28px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 gold">
+        <h1>The Oscars</h1>
+        <h2>Best Picture Nominations</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height2">
+        <ul class="nav nav-pills flex">
+          <li><a href="#">Best Picture</a></li>
+          <li><a href="#">Other Categories</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Past Winners</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 output">
+
+      </div>
+      <div class="col-md-4 height3 randomColor">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height2 gold">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    //  when document is loaded
+    $(document).ready(function() {
+      // this function gets a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+      // get all the elements (divs) with class randomColor
+      var randomColor = $(".randomColor");
+      //loop through all elements
+      //for each element change css background color to RGB+ 3 random colors
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+    })
+  </script>
+  <script type="text/javascript">
+    var oscar = [{
+        "title": "Call Me by Your Name",
+        "director": "Luca Guadagnino",
+        "genre": "Drama and Romance",
+        "imgUrl": "img/movie1.jpg"
+
+      },
+
+               {          
+        "title": "Darkest Hour",
+                  "director": "Joe Wright",
+                  "genre": "drama / history",
+                  "imgUrl":   "img/movie2.jpg"
+                
+      },
+
+               {          
+        "title": "Get Out",
+                  "director": "Jordan Peele",
+                  "genre": "mystery / horror",
+                  "imgUrl": "img/movie5.jpeg"
+                
+      },
+
+             {          
+        "title": "Dunkirk",
+                  "director": "Christopher Nolan",
+                  "genre": "drama / thriller",
+                  "imgUrl": "img/movie9.jpeg"
+              
+      },
+      {
+        "title": "Lady Bird",
+        "director": "Greta Gerwig",
+        "genre": "Drama and Comedy",
+        "imgUrl": "img/movie3.jpg"
+
+      },
+      {
+        "title": "Phantom Thread",
+        "director": "Paul Thomas Anderson",
+        "genre": "Drama and Crime",
+        "imgUrl": "img/movie4.jpg"
+
+      },
+      {
+        "title": "The Post",
+        "director": "Steven Spielberg",
+        "genre": "Drama and Thriller",
+        "imgUrl": "img/movie7.jpg"
+
+      },
+      {
+        "title": "The Shape of Water",
+        "director": "Guillermo Del Toro",
+        "genre": "Drama and Fantasy",
+        "imgUrl": "img/movie6.jpg"
+
+      },
+      {
+        "title": "Three Billboards Outside Ebbing, Missouri",
+        "director": "Martin McDonagh",
+        "genre": "Drama and Crime",
+        "imgUrl": "img/movie8.jpg"
+
+      },
+
+    ];
+
+    $(document).ready(function(){
+      // $(".output").html("test output");
+      var html="<table class='table table-striped table-hover'>" +
+      "<tr>"+
+      "<th>Picture</th>"+
+      "<th>Title</th>"+
+      "<th>Director</th>"+
+      "<th>Genre</th>"+
+      "</tr>";
+
+      // here is the loop of the array 'cats'
+
+      for (var i=0;i<oscar.length;i++){
+        console.log("i "+i);
+        html += "<tr>"+
+        "<td><img src='"+oscar[i].imgUrl+"'</td>"+
+        "<td>"+oscar[i].title+"</td>"+
+        "<td>"+oscar[i].director+"</td>"+
+        "<td>"+oscar[i].genre+"</td>"+
+        "</tr>";
+      }
+
+      html += "</table";
+      $(".output").html(html);
+    });
+
+  </script>
+</body>
+
+</html>
