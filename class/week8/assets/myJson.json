@@ -1,0 +1,42 @@
+[
+  {
+    "name":"twitter",
+    "colours":"light blue and white",
+    "logo":"little bird",
+    "ceo": "Jack Dorsey",
+    "yearFounded":2006,
+    "haveAccount": true
+  },
+  {
+    "name":"facebook",
+    "colours":"dark blue and white",
+    "logo":"letter f in a box",
+    "ceo": "Mark Zuckerberg",
+    "yearFounded":2004,
+    "haveAccount": true
+  },
+  {
+    "name":"instagram",
+    "colours":"multicoloured",
+    "logo":"simple camera",
+    "ceo": "Kevin Systrom",
+    "yearFounded":2010,
+    "haveAccount": true
+  },
+  {
+    "name":"snapchat",
+    "colours":"yellow and white",
+    "logo":"a ghost",
+    "ceo": "Evan Spiegel",
+    "yearFounded":2011,
+    "haveAccount": true
+  },
+  {
+    "name":"pinterest",
+    "colours":"red and white",
+    "logo":"letter p in a circle",
+    "ceo": "Ben Silbermann",
+    "yearFounded":2010,
+    "haveAccount": true
+  }
+]
