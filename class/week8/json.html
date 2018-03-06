@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting my JSON</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row output">
+
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    var url ="https://kayevans.github.io/class/week8/assets/myJson.json";
+
+    $.getJSON(url).done(function(data){
+      console.log("success! ");
+      console.dir(data);
+
+      var dataHtml="<table class='table table-striped table-hover'>" +
+      "<tr>"+
+      "<th>Name</th>"+
+      "<th>Colours</th>"+
+      "<th>Logo</th>"+
+      "<th>CEO</th>"+
+      "<th>Year Founded</th>"+
+      "<th>Have Account?</th>"+
+      "</tr>";
+
+      for (var i=0;i<data.length;i++){
+        console.log("i "+i);
+        dataHtml+="<tr>"+
+        "<td>"+data[i].name+"</td>"+
+        "<td>"+data[i].colours+"</td>"+
+        "<td>"+data[i].logo+"</td>"+
+        "<td>"+data[i].ceo+"</td>"+
+        "<td>"+data[i].yearFounded+"</td>"+
+        "<td>"+data[i].haveAccount+"</td>"+
+        "</tr>";
+      }
+      console.log(dataHtml);
+      $(document).ready(function(){
+          $(".output").html(dataHtml);
+          // we need to call it with dynamic html
+      })
+    }).fail(function(data){
+      console.log("failed! "+JSON.stringify(data));
+    });
+
+    </script>
+  </body>
+</html>
