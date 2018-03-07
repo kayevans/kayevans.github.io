@@ -17,15 +17,145 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style media="screen">
+      @import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Open+Sans');
+      h1{
+        font-family: 'Bungee Shade', cursive;
+        color: #00bfff;
+        font-size: 60px;
+        text-align: right;
+      }
+
+      .white{
+        background-color: #191970;
+        color: #00bfff;
+        height: 40px;
+      }
+
+      body{
+        background-color: #00bfff;
+      }
+
+      .container{
+        margin-top: 80px;
+      }
+
+      table, a{
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      ul{
+        padding-top: 20px;
+        list-style: none;
+        margin-left: 220px;
+        line-height: 28px;
+      }
+
+      a{
+        color: #00bfff;
+        font-size: 18px;
+      }
+
+      a:hover{
+        color: #00bfff;
+      }
+
+      table{
+        margin-top: 40px;
+      }
+
       th, td{
         text-align: center;
       }
+
+      th{
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      td, th{
+        border-bottom: 1px solid #191970;
+      }
+
+      .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+        border-top: 1px solid #191970;
+      }
+
+      .height1{
+        height: 95px;
+      }
+      .height2{
+        height: 500px;
+      }
+
+      .darkBlue{
+        background-color: #191970;
+      }
+
+      .lightBlue{
+        background-image: repeating-linear-gradient(180deg, #191970, #191970 2px, #00bfff 2px, #00bfff 4px);
+      }
+
+      .flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img{
+        max-width: 50%;
+      }
+
+      .bots{
+        padding-top: 20px;
+      }
+
     </style>
   </head>
   <body>
-    <div class="container">
+    <!-- <div class="container">
       <div class="row output">
 
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 height2 darkBlue">
+          <h1>SOCIAL MEDIA</h1>
+          <ul>
+            <li><a href="#">twitter</a></li>
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">snapchat</a></li>
+            <li><a href="#">pinterest</a></li>
+          </ul>
+
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-12 height1 lightBlue">
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 output">
+
+            </div>
+          </div>
+          <div class="row bots">
+            <div class="col-md-3 flex">
+              <img src="bot.png" alt="a bot image">
+            </div>
+            <div class="col-md-3 flex">
+              <img src="bot.png" alt="a bot image">
+            </div>
+            <div class="col-md-3 flex">
+              <img src="bot.png" alt="a bot image">
+            </div>
+            <div class="col-md-3 flex">
+              <img src="bot.png" alt="a bot image">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -40,8 +170,8 @@
       console.log("success! ");
       console.dir(data);
 
-      var dataHtml="<table class='table table-striped table-hover'>" +
-      "<tr>"+
+      var dataHtml="<table class='table'>" +
+      "<tr class='white'>"+
       "<th>Name</th>"+
       "<th>Colours</th>"+
       "<th>Logo</th>"+
