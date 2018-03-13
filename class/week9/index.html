@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ajax</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style media="screen">
+      .myHtml{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .font20{
+        font-size: 20px;
+      }
+      .boldText{
+        font-weight: bold;
+      }
+
+      .greyBackground{
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 myHtml">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var url = "https://samanthalaaa.github.io/class/week8/assets/carousel.json";
+
+  //     {
+  //   "name":"John",
+  //   "age": 25,
+  //   "hair": "black",
+  //   "wearsGlasses": true,
+  //   "background":"Italian",
+  //   "isFriendly":true
+  // },
+
+      function processData(d){
+          console.dir(d);
+          var html=""; // make a variable to hold the html
+
+          for (var i=0;i<d.length;i++){
+            html+="<div class='myItem'>"+
+            "<div class='font20 boldText'>"+d[i].name+"</div>"+
+            "<div>"+d[i].age+"</div>"+
+            "<div>"+d[i].hair+"</div>"+
+            "<div>"+d[i].wearsGlasses+"</div>"+
+            "<div>"+d[i].background+"</div>"+
+            "<div>"+d[i].isFriendly+"</div>"+
+            "<button type='button' class='itemButton btn btn-default'>Click!</button>"+
+            "</div>";
+
+          }
+          $(document).ready(function(){
+            $(".myHtml").html(html);
+
+            //event to handle a click (event-handler functions)
+            // event for all buttons; turn on click, execute function
+            $(".itemButton").on("click", function(){
+              console.log("click");
+              // go up the tree to the closest myItem and toggle the css class
+              $(this).closest(".myItem").toggleClass("greyBackground");
+
+            });
+          })
+      }
+
+      $.get(url)
+      .done(function(data){
+        // what comes back is put into  "data"
+        console.log("success!!");
+        // do something with data
+        processData(data);
+      })
+
+      .fail(function(data){
+        console.log("failed "+JSON.stringify(data));
+      })
+
+
+
+
+
+    </script>
+  </body>
+</html>
