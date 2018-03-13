@@ -72,10 +72,32 @@
         padding-top: 10px;
         margin-left: 100px;
       }
+
+      #return-to-top{
+        position: fixed;
+        background-color: black;
+        color: #ff8daf;
+        text-transform: uppercase;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 20px;
+        padding: 10px 15px 5px 15px;
+        text-align: center;
+        bottom: 50px;
+        right: 100px;
+        display: none;
+      }
+
+      #return-to-top:hover{
+        text-decoration: none;
+        background-color: #ff8daf;
+        color: black;
+        transition: 0.5s all ease;
+
+      }
     </style>
 </head>
 <body>
-<div class="myHeader">
+<div class="myHeader" id="top">
   <img class="lines" src="headerdesign.png" alt="lines">
   <nav>
     <ul class="flex">
@@ -93,6 +115,9 @@
     <!-- <h1> Kay's Diner Menu</h1> -->
   </header>
 </div>
+
+<a href="javascript:" id="return-to-top"><span class="glyphicon glyphicon-menu-up"></span></a>
+
 
 
 <!-- Insert Appetizers PNG Mock up Here -->
@@ -123,5 +148,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 120) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 500);
+    });
+
+</script>
   </body>
 </html>
