@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lottery</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style media="screen">
+
+      .winningTicket, .myTicket{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .lotteryBall{
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+        border-radius: 50px;
+        text-align: center;
+        background-color: lightpink;
+        font-size: 50px;
+        color: white;
+      }
+
+      .match{
+        background-color: grey;
+      }
+
+      .heading{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="heading">Winning Ticket</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 winningTicket">
+          <!-- <div class="lotteryBall match">43</div>
+          <div class="lotteryBall">11</div>
+          <div class="lotteryBall">23</div>
+          <div class="lotteryBall">32</div>
+          <div class="lotteryBall">27</div>
+          <div class="lotteryBall">18</div>
+          <div class="lotteryBall">30</div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="heading">My Ticket</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 myTicket">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 myOutput">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        //write pseudocode
+        //
+        //
+
+        var winningTicket = getRandomArray();
+        var myTicket = getRandomArray();
+        $(".myOutput").append("winningTicket " + winningTicket.join(";") + "<br>");
+        $(".myOutput").append("myTicket " + myTicket.join(";") + "<br>");
+        writeArrayToDiv(winningTicket, ".winningTicket");
+        writeArrayToDiv(myTicket, ".myTicket");
+        compareTickets();
+
+        function compareTickets() {
+
+          //go throught the winningTicket array
+          //if a value matches a data-value in myTicket then add .match class
+          for (var i = 0; i < winningTicket.length; i++) {
+            $(".myTicket").find("div[data-value='" + String(winningTicket[i]) + "']").addClass("match");
+          }
+        }
+
+        function writeArrayToDiv(arr, selector) {
+          //arr = the array
+          //selector = the class
+          var html = "";
+          for (var i = 0; i < arr.length; i++) {
+            html += "<div data-value='" + arr[i] + "' class='lotteryBall'>" + arr[i] + "</div>";
+          }
+
+          $(selector).html(html);
+        }
+
+        function sortNumber(a, b) { //sort from low to high
+          return a - b;
+        }
+
+        function getRandomArray() {
+          var tempArray = [];
+          //add a random number between 1 and 50 , 5 times
+          while (tempArray.length < 7) { //keep doing until we have 7
+            var randomNumber = Math.floor(Math.random() * 49 + 1); //get a randomNumber
+            if (tempArray.indexOf(randomNumber) === -1) { //if not in the array
+              tempArray.push(randomNumber); //add to the array
+            }
+          }
+          //sorted numbers
+          //no duplicates
+          tempArray.sort(sortNumber);
+          return tempArray;
+        }
+      </script>
+  </body>
+</html>
