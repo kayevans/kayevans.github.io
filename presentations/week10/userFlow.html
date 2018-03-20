@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tracey's Travel Blog</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style media="screen">
+    @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+        body{
+          font-family: 'Raleway', sans-serif;
+        }
+
+        .header h2{
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+        .carousel {
+        width:900px;
+        height:500px;
+        }
+
+        .logo{
+          padding-top: 80px;
+          padding-bottom: 30px;
+          max-width: 50%;
+          display: block;
+          margin: 0 auto;
+        }
+
+        ul{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 70px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+        }
+
+        li{
+          list-style-type: none;
+        }
+
+        li a{
+          text-transform: uppercase;
+          font-size: 14px;
+          color: black;
+        }
+
+        li a:hover{
+          color: lightblue;
+          transition: 0.3s all ease;
+          text-decoration: none;
+        }
+
+        .sidebar{
+          border: 1px solid black;
+          margin-top: 10px;
+        }
+
+        .sidebar img{
+          max-width: 55%;
+          border-radius: 50%;
+          display: block;
+          margin: 0 auto;
+          margin-top: 20px;
+
+        }
+
+        .sidebar h2{
+          text-align: center;
+        }
+
+        .sidebar h6{
+          font-size: 24px;
+        }
+
+        .subscribe{
+          margin-top: 30px;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+        .subscribe a{
+          height: 50px;
+          width: 100px;
+          border: 1px solid black;
+          color: black;
+          padding: 10px;
+        }
+
+        .subscribe a:hover{
+          text-decoration: none;
+          background-color: lightblue;
+          transition: 0.5s all ease;
+        }
+
+        #featured{
+          height: 600px;
+        }
+
+        #featured img{
+          max-width: 100%;
+        }
+
+        #featured h2{
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+
+        .caption{
+          width: 500px;
+          height: 160px;
+          position: relative;
+          margin-top: -300px;
+          margin-left: 150px;
+          background-color: white;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
+        .caption h5{
+          padding-top: 20px;
+          padding-bottom: 10px;
+          font-size: 12px;
+        }
+
+        .caption p{
+          font-size: 24px;
+          margin-bottom: 30px;
+        }
+
+        .button a{
+          height: 50px;
+          width: 100px;
+          border: 1px solid black;
+          color: black;
+          padding: 10px;
+        }
+
+        .button a:hover{
+          text-decoration: none;
+          background-color: lightblue;
+          transition: 0.5s all ease;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 header">
+          <img class="logo" src="serenity-logo.png" alt="logo">
+          <h2>Tracy's Travel Blog</h2>
+          <nav>
+            <ul>
+              <li><a href="#featured">Featured</a></li>
+              <li><a href="#blog">Blog Posts</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#photography">Photography</a></li>
+              <li><a href="#destinations">Destinations</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8" id="featured">
+          <h2>Featured Post</h2>
+            <img src="https://images.unsplash.com/photo-1497302347632-904729bc24aa?ixlib=rb-0.3.5&s=7aedbd8f3945af053ad3f8a03e50b602&auto=format&fit=crop&w=1050&q=80" alt="Planning">
+            <div class="caption">
+              <h5>March 19th 2018</h5>
+              <p>How to plan your first trip</p>
+              <div class="button">
+                <a href="#">KEEP READING</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4 sidebar">
+          <img src="https://images.unsplash.com/photo-1508875685791-1becca1da30d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3ba93214edd0865747cc3406257c84a&auto=format&fit=crop&w=1010&q=80" alt="Outfits">
+          <h2>Hello!</h2>
+          <h3>Welcome to my site</h3>
+          <p>I am a travel blogger who also works as a travel photographer. I started this site to keep track of all my activities in one place. Here you will find more information about me, the places I've been do, the stuff I post on my blog, and my latest photography work.</p>
+          <p>Please feel free to explore!</p>
+          <h6>Subscribe to My Newsletter!</h6>
+          <p>It will come out biweekly and contain my latest blog posts, Q&As, travel tips, and updates on my work!</p>
+          <p class="subscribe"><a href="#">SUBSCRIBE HERE</a></p>
+        </div>
+      </div>
+      <div class="row" id="blog">
+        <div class="col-md-4">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1502301197179-65228ab57f78?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=642af8dddf7f943be34abbc7be686de3&auto=format&fit=crop&w=632&q=80" alt="Europe">
+            <figcaption>What to pack for 12 weeks in Europe!</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-4">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1508875685791-1becca1da30d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3ba93214edd0865747cc3406257c84a&auto=format&fit=crop&w=1010&q=80" alt="Outfits">
+            <figcaption>How to fit 25 outfits in a carry on!</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-4">
+          <figure>
+              <img src="https://images.unsplash.com/photo-1514544086895-dfb2d2969697?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0b02fe61023834602b6ed35f109a16b&auto=format&fit=crop&w=1050&q=80" alt="Money">
+              <figcaption>How to make a living while traveling.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" id="about">
+          <h2>About Me</h2>
+          <p>I'm Tracey! I was born and raised in Columbus, Ohio and developed a love for travel after my first trip abroad to Ireland. I was eight and we visited my father's family for a few days and toured the countryside. Since then, I've always jumped at the chance to visit other places. My first solo trip came when I was 18 and I flew to Ibiza to work in a hostel there for two months. I got a TEFL certificate which allowed me to teach English to both children and adults in South Korea, the Philippines, Thailand, and Saudi Arabia. I've currently been away from Ohio for over two years, and while I miss home, I always meet people in every destination who make each new city feel like home.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" id="photography">
+          <h6>Photography Work</h6>
+          <p>I have worked as a freelance photographer for many publications, including National Geographic, Hotels.com, Expedia, and Lonely Planet. In addition, I have also partnered with hotels to produce sponsored posts for them.</p>
+          <img src="https://images.unsplash.com/photo-1493805503700-3219b693ffcc?ixlib=rb-0.3.5&s=9850259b418dcd691cc6e8d2019e13c8&auto=format&fit=crop&w=1350&q=80" alt="Camera">
+        </div>
+      </div>
+      <div class="row" id="destinations">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-book-cruise-trip-flight-discount-ad-vacation-poster-template-f27d2fca1b7775f37ffccb216fa385cc_screen.jpg?ts=1455927820" alt="ad1">
+        </div>
+        <div class="col-md-4">
+                <img src="http://adaholic.com/wp-content/uploads/3072.jpg" alt="ad2">
+        </div>
+        <div class="col-md-4">
+          <img src="https://bloximages.chicago2.vip.townnews.com/mtstandard.com/content/tncms/assets/v3/classifieds/3/2d/32d0b6ef-88dc-56d1-8ec4-e68c43bd7167/5a95aae6cfa82.preview.jpg" alt="ad3">
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script>
+    var slides = [{
+        "source": "https://images.unsplash.com/photo-1468437012950-7d4960be6383?ixlib=rb-0.3.5&s=a484021877e02bad0bbd17b827753423&auto=format&fit=crop&w=1111&q=80",
+        "alternate": "Morraine Lake",
+        "caption": "Canada!",
+        "slideClass": "item active" //don't call it just "class" because that's a key word
+
+      },
+
+      {
+        "source": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&s=9e3d97e95ab6b974f1637d6441ec0698&auto=format&fit=crop&w=1050&q=80",
+        "alternate": "Grand Canyon",
+        "caption": "Grand Canyon!",
+        "slideClass": "item" //don't call it just "class" because that's a key word
+
+      },
+
+      {
+        "source": "https://images.unsplash.com/photo-1461237439866-5a557710c921?ixlib=rb-0.3.5&s=eabf02328258bbefa85e24a953fa4636&auto=format&fit=crop&w=1052&q=80",
+        "alternate": "Morroco",
+        "caption": "Morroco!",
+        "slideClass": "item" //don't call it just "class" because that's a key word
+
+      }
+
+    ];
+
+    var slidesHtml = "";
+    for (var i = 0; i < slides.length; i++) {
+      console.log("i " + i);
+      slidesHtml += '<div class="' + slides[i].slideClass + '">' +
+        '<img src="' + slides[i].source + '" alt="' + slides[i].alternate + '">' +
+        '<div class="carousel-caption">' +
+        slides[i].caption +
+        '</div>' +
+        '</div>';
+    }
+
+
+
+
+    $(document).ready(function() {
+      $(".carousel-inner").html(slidesHtml);
+      //we need to call it with dynamic html
+      $(".carousel").carousel();
+    })
+  </script>
+  </body>
+</html>
