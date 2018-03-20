@@ -286,6 +286,27 @@
           padding-bottom: 20px;
         }
 
+        #return-to-top{
+          position: fixed;
+          background-color: grey;
+          color: lightblue;
+          text-transform: uppercase;
+          font-family: 'Open Sans Condensed', sans-serif;
+          font-size: 20px;
+          padding: 10px 15px 5px 15px;
+          text-align: center;
+          bottom: 50px;
+          right: 100px;
+          display: none;
+        }
+
+        #return-to-top:hover{
+          text-decoration: none;
+          background-color: lightblue;
+          color: grey;
+          transition: 0.5s all ease;
+        }
+
     </style>
 
   </head>
@@ -409,6 +430,8 @@
       </div>
     </div>
 
+    <a href="javascript:" id="return-to-top"><span class="glyphicon glyphicon-menu-up"></span></a>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -460,6 +483,19 @@
       //we need to call it with dynamic html
       $(".carousel").carousel();
     })
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 400) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 500);
+    });
   </script>
   </body>
 </html>
