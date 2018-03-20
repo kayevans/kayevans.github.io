@@ -29,9 +29,11 @@
           text-transform: uppercase;
           font-size: 14px;
         }
-        .carousel {
+        .carousel{
         width:900px;
         height:500px;
+        margin: 0 auto;
+        margin-bottom: 150px;
         }
 
         .logo{
@@ -145,7 +147,7 @@
           margin-bottom: 30px;
         }
 
-        .button a{
+        #featured .button a{
           height: 50px;
           width: 100px;
           border: 1px solid black;
@@ -153,11 +155,137 @@
           padding: 10px;
         }
 
-        .button a:hover{
+        #featured .button a:hover{
           text-decoration: none;
           background-color: lightblue;
           transition: 0.5s all ease;
         }
+
+        #blog img{
+          max-width: 100%;
+        }
+
+        .scale{
+          width: 360px;
+          height: 253px;
+          object-fit: cover;
+        }
+
+        .blogCaptions{
+            width: 250px;
+            height: 80px;
+            position: relative;
+            margin-top: -150px;
+            margin-left: 50px;
+            background-color: white;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .blogCaptions h5{
+          padding-top: 10px;
+          font-size: 10px;
+        }
+
+        .blogCaptions a{
+          color: black;
+        }
+
+        .blogCaptions a:hover{
+          color: lightblue;
+          text-decoration: none;
+          transition: 0.3s all ease;
+
+        }
+
+        #blog{
+          padding-bottom: 100px;
+        }
+
+        #about h2{
+          text-align: center;
+          text-transform: uppercase;
+          padding-bottom: 20px;
+          padding-top: 20px;
+        }
+
+        #about p{
+          width: 900px;
+          margin: 0 auto;
+          padding-bottom: 50px;
+          font-size: 16px;
+        }
+
+        #about{
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+        }
+
+        #photography h2{
+          text-transform: uppercase;
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
+
+        #photography p{
+          width: 900px;
+          font-size: 16px;
+          padding-bottom: 20px;
+        }
+
+        #photography img{
+          max-width: 100%;
+        }
+
+        .cameraCaption{
+          width: 800px;
+          height: 160px;
+          position: relative;
+          margin-top: -650px;
+          margin-left: 200px;
+          background-color: white;
+          text-align: center;
+        }
+
+        .cameraCaption h5{
+          padding-top: 40px;
+          padding-bottom: 20px;
+          font-size: 20px;
+        }
+
+        .cameraCaption .button a{
+          height: 50px;
+          width: 150px;
+          border: 1px solid black;
+          color: black;
+          padding: 10px;
+        }
+
+        .cameraCaption .button a:hover{
+          text-decoration: none;
+          background-color: lightblue;
+          transition: 0.5s all ease;
+        }
+
+        #photography{
+          padding-bottom: 480px;
+        }
+
+        #destinations h2{
+          padding-bottom: 20px;
+          padding-top: 20px;
+          border-top: 1px solid black;
+          text-align: center;
+        }
+
+        .ads img{
+          max-width: 100%;
+        }
+
+        .ads{
+          padding-bottom: 20px;
+        }
+
     </style>
 
   </head>
@@ -203,22 +331,25 @@
       </div>
       <div class="row" id="blog">
         <div class="col-md-4">
-          <figure>
-            <img src="https://images.unsplash.com/photo-1502301197179-65228ab57f78?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=642af8dddf7f943be34abbc7be686de3&auto=format&fit=crop&w=632&q=80" alt="Europe">
-            <figcaption>What to pack for 12 weeks in Europe!</figcaption>
-          </figure>
+            <img src="https://images.unsplash.com/photo-1502301197179-65228ab57f78?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=642af8dddf7f943be34abbc7be686de3&auto=format&fit=crop&w=632&q=80" alt="Europe" class="scale">
+            <div class="blogCaptions">
+              <h5>March 12th 2018</h5>
+              <p><a href="#">What to pack for 12 weeks in Europe!</a></p>
+            </div>
         </div>
         <div class="col-md-4">
-          <figure>
             <img src="https://images.unsplash.com/photo-1508875685791-1becca1da30d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3ba93214edd0865747cc3406257c84a&auto=format&fit=crop&w=1010&q=80" alt="Outfits">
-            <figcaption>How to fit 25 outfits in a carry on!</figcaption>
-          </figure>
+            <div class="blogCaptions">
+              <h5>March 7th 2018</h5>
+              <p><a href="#">How to fit 25 outfits in a carry on!</a></p>
+            </div>
         </div>
         <div class="col-md-4">
-          <figure>
-              <img src="https://images.unsplash.com/photo-1514544086895-dfb2d2969697?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0b02fe61023834602b6ed35f109a16b&auto=format&fit=crop&w=1050&q=80" alt="Money">
-              <figcaption>How to make a living while traveling.</figcaption>
-          </figure>
+              <img src="https://images.unsplash.com/photo-1514544086895-dfb2d2969697?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0b02fe61023834602b6ed35f109a16b&auto=format&fit=crop&w=1050&q=80" alt="Money" class="scale">
+              <div class="blogCaptions">
+                <h5>February 28th 2018</h5>
+                <p><a href="#">How to make a living while traveling.</a></p>
+              </div>
         </div>
       </div>
       <div class="row">
@@ -229,12 +360,19 @@
       </div>
       <div class="row">
         <div class="col-md-12" id="photography">
-          <h6>Photography Work</h6>
+          <h2>Photography Work</h2>
           <p>I have worked as a freelance photographer for many publications, including National Geographic, Hotels.com, Expedia, and Lonely Planet. In addition, I have also partnered with hotels to produce sponsored posts for them.</p>
           <img src="https://images.unsplash.com/photo-1493805503700-3219b693ffcc?ixlib=rb-0.3.5&s=9850259b418dcd691cc6e8d2019e13c8&auto=format&fit=crop&w=1350&q=80" alt="Camera">
+          <div class="cameraCaption">
+            <h5>If you would like to work with me, please contact me.</h5>
+            <div class="button">
+              <a href="#">CONTACT ME</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row" id="destinations">
+        <h2>Destinations</h2>
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -258,12 +396,12 @@
             </a>
           </div>
       </div>
-      <div class="row">
+      <div class="row ads">
         <div class="col-md-4">
           <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-book-cruise-trip-flight-discount-ad-vacation-poster-template-f27d2fca1b7775f37ffccb216fa385cc_screen.jpg?ts=1455927820" alt="ad1">
         </div>
         <div class="col-md-4">
-                <img src="http://adaholic.com/wp-content/uploads/3072.jpg" alt="ad2">
+          <img src="http://www.adruby.com/files/image-ads/tania-travel-book-your-flight.-print-ads-1a001.jpg" alt="ad2">
         </div>
         <div class="col-md-4">
           <img src="https://bloximages.chicago2.vip.townnews.com/mtstandard.com/content/tncms/assets/v3/classifieds/3/2d/32d0b6ef-88dc-56d1-8ec4-e68c43bd7167/5a95aae6cfa82.preview.jpg" alt="ad3">
