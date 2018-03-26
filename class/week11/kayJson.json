@@ -1,0 +1,40 @@
+{
+  "Sheet1": {
+    "1": {
+      "itemId": 1,
+      "kayEvaTitle": "Bobble",
+      "kayEvaPrice": 12.59,
+      "kayEvaImg": "kayevans.github.io/class/week11/img/bottle1.jpg"
+    },
+    "2": {
+      "itemId": 2,
+      "kayEvaTitle": "Big Bottle Co.",
+      "kayEvaPrice": 45.67,
+      "kayEvaImg": "kayevans.github.io/class/week11/img/bottle2.jpg"
+    },
+    "3": {
+      "itemId": 3,
+      "kayEvaTitle": "Swell",
+      "kayEvaPrice": 37.97,
+      "kayEvaImg": "kayevans.github.io/class/week11/img/bottle3.jpg"
+    },
+    "4": {
+      "itemId": 4,
+      "kayEvaTitle": "BKR",
+      "kayEvaPrice": 85.43,
+      "kayEvaImg": "kayevans.github.io/class/week11/img/bottle4.jpg"
+    },
+    "5": {
+      "itemId": 5,
+      "kayEvaTitle": "Yeti",
+      "kayEvaPrice": 53.45,
+      "kayEvaImg": "kayevans.github.io/class/week11/img/bottle5.jpg"
+    },
+    "6": {
+      "itemId": 6,
+      "kayEvaTitle": "Lokai",
+      "kayEvaPrice": 32.65,
+      "kayEvaImg": "kayevans.github.io/class/week11/img/bottle6.jpg"
+    }
+  }
+}
