@@ -165,10 +165,12 @@
         html+="<div data-id='"+jsonObj+"' class='itemContainer'>";
 
         for (key in d[jsonObj]){
+          var str = String(d[jsonObj][key]);
+
           if (key==="itemId"){
             continue; // means skip this iteration of loop
           }
-          if (d[jsonObj][key].indexOf("github")!==-1){
+          if (str.indexOf("github")!==-1){
             //if github text appears in the value (=1 means not found)
             html+="<div class='imageContainer'><img src='https://"+d[jsonObj][key]+"'></div>";
           }
