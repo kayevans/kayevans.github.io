@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cards Website Template</title>
   <style media="screen">
+
+  @import url('https://fonts.googleapis.com/css?family=Lato|Playball|Playfair+Display');
+
+  .header h1, .nameLabel{
+    font-family: 'Playfair Display', serif;
+  }
+
+  li a{
+    font-family: 'Lato', sans-serif;
+  }
     .outputArray {
       display: flex;
       flex-wrap: wrap;
@@ -14,12 +24,10 @@
     }
 
     .individualCard { /*spaces out the cards */
-      margin-left: 30px;
-      margin-right: 30px;
-      padding: 100px;
-      background-image: url(city.jpg);
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 20px;
       background-size: cover;
-
     }
 
     .cardInfo {
@@ -27,7 +35,7 @@
     }
 
     .itemButton{
-      text-align: right;
+      text-align: center;
       padding: 10px;
     }
 
@@ -42,13 +50,84 @@
       color: black;
     }
 
-    h1{
-      text-align: center;
+    .header h1{
+      text-align: left;
+      font-size: 100px;
+      padding-top: 50px;
+      padding-bottom: 180px;
+      margin-left: 30px;
     }
 
     img{
       width: 500px;
+      margin-top: 20px;
+      opacity: 1;
     }
+
+    img:hover{
+      opacity: 0.3;
+      transition: 0.8s all ease;
+    }
+
+    .nameLabel{
+      font-size: 72px;
+      text-align: right;
+      text-transform: lowercase;
+
+    }
+
+    .individualCard{
+      border: 1px solid black !important;
+    }
+
+    li a{
+      text-transform: uppercase;
+    }
+
+    li a:hover{
+      color: lightblue;
+      text-decoration: none;
+      transition: 0.6s all ease;
+    }
+
+    ul{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid black;
+    }
+
+    .ageLabel, .countryLabel, .languageLabel{
+      text-align: left;
+      font-size: 12px;
+      color: black;
+    }
+
+    .ageLabel{
+      margin-top:-70px;
+    }
+
+    .footer{
+      border-top: 1px solid black;
+      margin-top: 50px;
+      height: 100px;
+      text-align: center;
+    }
+
+    .footer p{
+      margin-top: 20px;
+    }
+
+    .header{
+      background-image: url(city.png);
+      background-repeat: no-repeat;
+      background-size: 60% auto;
+      background-position: bottom right;
+    }
+
+    .cardSection{
+      padding-top: 80px;
+    }
+
 
   </style>
 
@@ -67,12 +146,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 header">
-        <h1>Cities</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 header">
+      <div class="col-md-12">
         <ul class="flex">
           <li><a href="#">Cities</a></li>
           <li><a href="#">Countries</a></li>
@@ -80,6 +154,11 @@
           <li><a href="#">Blog</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 header">
+        <h1>my favorite cities</h1>
       </div>
     </div>
     <div class="row">
@@ -92,6 +171,7 @@
     </div>
     <div class="row">
       <div class="col-md-12 footer">
+        <p class="credits">© 2018 Kay Evans</p>
       </div>
     </div>
   </div>
@@ -109,6 +189,7 @@
           "population": "2 million",
           "country": "Canada",
           "language": "English",
+          "photo": "https://kayevans.github.io/presentations/week11/toronto.jpg",
           "button": "More Info" //if u wish to do buttons
         },
 
@@ -117,6 +198,7 @@
           "population": "13 million",
           "country": "Japan",
           "language": "Japanese",
+          "photo": "https://kayevans.github.io/presentations/week11/tokyo.jpg",
           "button": "More Info" //if u wish to do buttons
         },
 
@@ -125,14 +207,16 @@
           "population": "2 million",
           "country": "France",
           "language": "French",
+          "photo": "https://kayevans.github.io/presentations/week11/paris.jpg",
           "button": "More Info" //if u wish to do buttons
         },
 
         {
           "name": "Amsterdam",
           "population": "850 thousand",
-          "country": "Japan",
-          "language": "Japanese",
+          "country": "Netherlands",
+          "language": "Dutch",
+          "photo": "https://kayevans.github.io/presentations/week11/amsterdam.jpg",
           "button": "More Info" //if u wish to do buttons
         },
 
@@ -141,6 +225,7 @@
           "population": "2.8 million",
           "country": "Italy",
           "language": "Italian",
+          "photo": "https://kayevans.github.io/presentations/week11/rome.jpg",
           "button": "More Info" //if u wish to do buttons
         },
 
@@ -149,6 +234,7 @@
           "population": "3.9 million",
           "country": "USA",
           "language": "English",
+          "photo": "https://kayevans.github.io/presentations/week11/la.jpg",
           "button": "More Info" //if u wish to do buttons
         }
       ];
@@ -170,8 +256,9 @@
           //  "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
             "<div class='cardInfo nameLabel'>" + arrayTopic[i].name + "</div>" + //change the red text to the keys in your Array
             "<div class='cardInfo ageLabel'>" + arrayTopic[i].population + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + arrayTopic[i].country + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + arrayTopic[i].language + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo countryLabel'>" + arrayTopic[i].country + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo languageLabel'>" + arrayTopic[i].language + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo photoLabel'><img src='"+arrayTopic[i].photo+"'></div>" +
             "<div class='itemButton'><button type='button' class='btn btn-default'>" + arrayTopic[i].button + "</button></div>" + //Button Template
             "</div>";
         }
