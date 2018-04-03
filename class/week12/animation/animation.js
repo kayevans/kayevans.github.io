@@ -158,12 +158,32 @@ var spriteImages = [{
     "height": 193,
     "name": "can"
   },
+  {    "spriteMapUrl":"https://julianneferr.github.io/class/week12/animation/images/lightbulb.png",
+    "numFrames": 7,
+    "width": 1000,
+    "height": 200,
+    "name": "lightbulb"
+  },
+  {
+    "spriteMapUrl": "https://bill-curne.github.io/class/animation/images/heisenberg.png",
+    "numFrames": 10,
+    "width": 1300,
+    "height": 130,
+    "name": "heisenberg"
+  },
   {
     "spriteMapUrl":"https://kiannagram.github.io/class/week12/animation/images/ARTZU.png",
     "numFrames": 7,
     "width": 2100,
     "height": 694,
     "name": "colour goat"
+  },
+  {
+  "spriteMapUrl":"https://abelwm.github.io/class/week12/animation/images/pizza.png",
+    "numFrames": 14,
+    "width": 1400,
+    "height": 100,
+    "name": "pizza"
   },
   {
     "spriteMapUrl": "images/catWalking.png",
