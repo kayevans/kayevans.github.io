@@ -159,6 +159,13 @@ var spriteImages = [{
     "name": "can"
   },
   {
+    "spriteMapUrl":"https://kiannagram.github.io/class/week12/animation/images/ARTZU.png",
+    "numFrames": 7,
+    "width": 2100,
+    "height": 694,
+    "name": "colour goat"
+  },
+  {
     "spriteMapUrl": "images/catWalking.png",
     "numFrames": 12,
     "width": 4800,
