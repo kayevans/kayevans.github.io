@@ -152,6 +152,13 @@ var spriteImages = [{
     "name": "girl"
   },
   {
+    "spriteMapUrl": "https://samanthalaaa.github.io/class/week12/animation/images/spriteSprite.png",
+    "numFrames": 10,
+    "width": 994,
+    "height": 101,
+    "name": "sprite"
+  },
+  {
     "spriteMapUrl": "images/sprite.png",
     "numFrames": 10,
     "width": 1000,
