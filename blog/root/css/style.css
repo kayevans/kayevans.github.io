@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Raleway');
+
+
+/* Eric Meyer CSS Reset Begins */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* Eric Meyer CSS Reset Ends */
+
+
+/* formatting of the title */
+.site-title{
+    margin: 0 auto;
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    width: 30%; 
+/*    applies the animation to the crown title */
+    animation: swing 0.7s linear 1;
+}
+
+                                        /* DEFAULT STYLING  OF TEXT, ARTICLES, AND IMAGES */
+/* default font styling */
+body{
+    font-size: 18px;
+    font-family: 'raleway', sans-serif;
+}
+
+/* remove the underline, and make the links black*/
+a{
+    text-decoration: none;
+    color: black; 
+}
+
+/* align the headings to the center */
+h2{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+/* styling and spacing of the paragraphs */
+p{
+    text-indent: 1.7%;
+    margin-bottom: 1.5%;
+    padding: .5%;
+    line-height: 1.4;
+}
+
+/* styling and spacing of the h3s*/
+h3{
+    font-family: 'Amatic SC';
+    font-size: 275%;
+    padding-bottom: 2%; 
+    text-align: center;
+}
+
+/* styling and spacing of the h4s, capitalize them*/
+h4{
+    padding:1%;
+    font-size: 80%;
+    text-transform: capitalize;
+    text-align: right;
+}
+
+/* styling and spacing of the h5s */
+h5{
+    padding-top: 1%;
+    padding-bottom: 1%; 
+    font-weight: 600;
+    font-size: 110%;
+}
+
+/* styling and spacing of the articles, adds background color */
+article{
+    background-color: rgba(255, 229, 255, 0.7);
+    padding:1%;
+    margin-bottom: 2.5%;
+}
+
+/* styling and spacing of the images, make them max 100% so that will be responsive*/
+img{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    max-width: 100%;
+}
+
+/* styling and spacing of the image captions */
+figcaption{
+    text-align: center;
+    padding-bottom: 4%;
+    font-size: 75%;
+}
+
+                                    /*  NAV BAR  */
+/* styling and spacing of the nav bar, make inline block to get them positioned beside each other*/
+nav li{
+    display: inline-block;
+    text-align: center;
+    padding: 1%; 
+    font-size: 110%;
+}
+
+/* make the nav links white on hover, add ease to make it less harsh of change */
+nav a:hover{
+    color: rgb(168, 166, 168);
+    transition: 0.3s ease;
+}
+
+/* styling of the top nav bar consitent on all pages, make it fixed to top of page */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    background-color: rgb(255, 229, 255);
+    text-transform: uppercase;
+/*    brings it forward to fix issue on home page where it hides behind slideshow*/
+    z-index: 50;
+}
+
+/* hides the show menu and the hide menu button */
+nav > a{
+    display: none;
+}
+
+                                    /*  PICTURE NAV BAR    */
+/* adds left margin to the picture nav bar section */
+#homepagenav{
+    margin-left: 9%;
+}
+
+/* styling and spacing of the picture links, make inline block to get links beside each other */
+#homepagenav li{
+    width: 22%;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 8%; 
+    padding-top:8%; 
+    margin-top: 5%;
+    font-family: 'Amatic SC';
+    font-size: 300%;
+}
+
+/* adds a white background to the li to see titles over the photos */
+#homepagenav a{
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/* adds background image to the motherhood link in the home picture nav */
+#motherhoodlink{
+    background-image: url(../images/Motherhood.jpg);
+    background-size: cover;
+}
+
+/* adds background image to the lifestyle link in the home picture nav */
+#lifestylelink{
+    background-image: url(../images/lifestyle.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* adds background image to the health link in the home picture nav */
+#healthlink{
+    background-image: url(../images/health.jpg);
+    background-size: cover;
+}
+
+/* adds background image to the fitness link in the home picture nav */
+#fitnesslink{
+    background-image: url(../images/fitness.jpg);
+    background-size: cover;
+}
+
+/* makes the links change opacity on hover */
+#motherhoodlink:hover, #lifestylelink:hover, #healthlink:hover, #fitnesslink:hover{
+    opacity: 0.6;
+    transition: 0.3s ease;
+}
+
+
+                                /*  FOOTER STYLING   */
+
+/* spacing and styling of the footer */
+footer{
+    background-color: rgb(255, 229, 255);
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 8%;
+}
+
+                                        /* SIDE BAR STYLING */
+
+/* format the content on the page, centre it and put display flex so that the main and aside float beside each other */
+.content-wrapper{
+    margin: 0 auto;
+    margin-top: 2.5%;
+    width: 90%;
+    display: flex;
+}
+
+/* put 5 so that the main takes up 5 times the amount of room as the sidebar, put space between main and side bar*/
+main{
+    flex: 5;
+    margin-right: 3%;
+}
+
+/* styling and spacing of the side bar, applies the grey background*/
+.side-bar{
+    border: 1px solid black;
+    padding: 4%;
+/*   put 1 so that side bar takes up less room in comparison to the main  */
+    flex: 1;
+/*    fixes issue of height */
+    align-self: flex-start;
+}
+
+/* makes the image responsive, adds space above, and makes it a circle */
+.side-bar img{
+    width: 100%;
+    border-radius: 50%;
+    padding-top: 10%;
+}
+
+/* spacing and styling of the text inside the sidebar */
+.side-bar p{
+    font-size: 80%;
+    padding-top: 5%;
+}
+
+/* changes the color of the link */
+.side-bar a:hover{
+    color: rgb(168, 166, 168);
+    transition: 0.4s ease;
+}
+
+/* add a pink underline to heading */
+.side-bar h3{
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 229, 255);
+}
+
+/* aligns the social icons in the center of the sidebar, spaces it from the paragraphs */
+.side-bar .social{
+    text-align: center;
+    padding-top: 12%;
+    font-size: 180%;
+}
+
+/* spaces them out so that they remain in centre by applying padding only on the centre icon */
+.side-bar .social a:nth-child(2){
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+                                        /* CONTACT PAGE AND FORM STYLING */
+
+/* styling for the contact sheet, centres the content on the page*/
+#contact-page main{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+/* align the text to the left*/
+#contact-page main p, #contact-page h3, form{
+    text-align: left;
+}
+
+/* adds a little space to the left of the paragraph*/
+#contact-page h3{
+    margin-left: 2%;
+}
+
+/* adds a little space between the paragraph and the form */
+#contact-page form{
+    margin-top: 5%;
+}
+/* gets the label and input area on top of each other */
+#contact-page label, #contact-page input{
+    display: block;
+}
+
+/* adds spacing around each part of the form */
+#contact-page label, #contact-page input, #contact-page textarea{
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+/* defines area for the long answer, adds space between it and the submit button */
+#contact-page textarea{
+    width: 70%;
+    height: 100px;
+    margin-bottom: 5%;
+    border: 1px solid black;
+}
+
+/* defines area for the short answers, adds space between it and the next labels */
+#contact-page input{
+    width: 50%;
+    height: 25px;
+    margin-bottom: 2%;
+    border: 1px solid black;
+}
+
+/* changes the outline color when the input areas are selected */
+#contact-page input:focus, #contact-page textarea:focus{
+    outline-color: rgb(255, 229, 255);
+}
+
+/* styling and centering of the submit button, changing the font size and makes it the uppercase, changes background color and font color */
+#contact-page .button{
+    margin: 0 auto;
+    width: 200px;
+    height: 30px;
+    font-size: 110%;
+    text-transform: uppercase;
+    background-color: rgba(128, 128, 128, 0.2);
+    color: black;
+    border: 1px solid black;
+    border-radius: 0%;
+/*    adds the pointer so that people know it is a button */
+    cursor: pointer;  
+}
+
+/* change the background color when button is hovered, and add ease to reduce the harsh reaction */
+#contact-page .button:hover{
+    background-color: rgb(255, 229, 255);
+    transition: 0.7s ease;
+}
+
+
+                                        /*  BACK TO TOP BUTTON STYLING   */
+
+/* styling and spacing of the back to top arrow, make it fixed to the bottom, and make z index  big so wont be covered by other elements, display none to start until jquery*/
+.back-to-top{
+    font-size: 300%;
+    background-color: rgba(128, 128, 128, 0.3);
+    padding: 0 10px 0 10px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20%;
+    right: 5%;
+    z-index: 100;
+    display: none;
+}
+
+/* change color of the back to top button on hover */
+.back-to-top:hover{
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+
+                                        /* MEDIA QUERIES */
+
+@media only screen and (max-width: 780px){
+    /*  makes the space above the title bigger to accomodate for the pink nav bar, makes the title bigger  */
+    .site-title{
+        width: 70%;
+        margin-top: 8%;
+        margin-bottom: 4%;
+    }
+    
+    /*  hides the side bar due to lack of space on smaller screens   */
+    .side-bar{
+        display: none;
+    }
+    
+    /*    takes off the margin on the main section   */
+    main{
+        margin-right: 0;
+    }
+    
+    /* adds more space above the articles    */
+    .content-wrapper{
+        margin-top: 5%;
+    }
+    
+                                        /*  HOME NAV BAR   */
+    
+    /* take off left margin to the picture nav bar section, add space above the nav */
+    #homepagenav{
+        margin-top: 10%;
+        margin-left: 0;
+    }
+
+    /* styling and spacing of the picture links, make block to get links on top of each other, makes the pictures bigger, take up more of the screen */
+    #homepagenav li{
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20%; 
+    padding-top: 20%; 
+    margin-top: 5%;    
+    }
+    
+    /*  repositions the motherhood photo  */
+    #motherhoodlink{
+        background-position: center;
+    }
+
+
+                                        /*  NAV and HAMBURGER MENU STYLING   */
+    /*  put constant height on the nav  */
+    #site-nav{
+        height: 40px;
+    }
+    
+    /*    hides the list items initially */
+    #site-nav li{
+        display: none; 
+    }
+    
+    /*    shows the menu buttons */
+    #site-nav a{
+        display: block;
+    }
+    
+    /*     hides the hide menu button */
+    #site-nav #hide-menu-button{
+        display: none;
+    }
+    
+/*    sets the position and dimentions of the hamburger menu, use pixels to keep it the same at different screens */
+    #site-nav > a{
+        width: 50px;
+        height: 30px;
+        position: absolute;
+        overflow: hidden;
+        top: 5px;
+        right: 10px;
+    /*        ensures that the border doesnt make box bigger */
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    /*    hides the "show menu" title to replace with hamburger */
+    #site-nav > a span{
+        display: none;
+    }
+    
+    /*  styling of the lines of the outer two lines of hamburger  */
+    #show-menu-button{
+        border-top: solid 4px grey;
+        border-bottom: solid 4px grey;
+    }
+    
+    /*  styling and positioning of the middle line of the hamburger  */
+    #show-menu-button::before{
+        content:'';
+        border-bottom: solid 4px grey;
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        margin-top: -2px;
+    }
+    
+    /*   styling of the x replacing the hamburger button     */
+    #hide-menu-button::before, #hide-menu-button::after{
+        content: '';
+        display: block;
+        border-bottom: solid 4px grey;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        margin-top: -2px;
+        -webkit-transform: rotate(41deg);
+        transform: rotate(41deg);
+    }
+    
+    #hide-menu-button::after{
+        transform: rotate(-41deg);
+    }
+    
+    /*    when site nav is clicked take up whole screen */
+    #site-nav:target{
+        height: 100vh;
+        background-color: rgba(255, 229, 255, 0.95);
+    /*        hides the scroll to top button */
+        z-index: 200;
+    }
+    
+    #site-nav:target ul{
+    /*        hides unordered list/menu  */
+        display: block;
+    /*        centres the ul without depending on depending dimensions*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    /*        refers to width and height of element youre styling */
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
+        width: 80%;
+    /*    applies the fade in animation */
+        animation: fade-in 0.66s 1;
+    }
+    
+    /*  positions all the li's on top of each other, centres them on the page  */
+    #site-nav:target li{
+        display: block;
+        text-align: center;
+    }
+    /*  changes font size of the links and spaces them out  */
+    #site-nav ul a{
+        font-size: 220%;
+        padding: 2%;
+    } 
+    
+    /*   changes the color of the links  */
+    #site-nav:target a{
+        color: grey;
+    }
+    
+    /*    hides show menu button  */
+    #site-nav:target #show-menu-button{
+        animation: show-menu 0.5s 1 both;
+    }
+    
+    /*  animates the first line of the hide menu button  */
+     #site-nav:target #hide-menu-button:before{
+        animation: hide-menu-before 1s 1 both;
+    }
+    
+    /*  animates the second line of the hide menu button   */
+    #site-nav:target #hide-menu-button:after{
+        animation: hide-menu-after 1s 1 both;
+    }
+    
+    /*  makes x become visible  */
+    #site-nav:target #hide-menu-button{
+        display: block;
+    }
+                                                /*  CONTACT PAGE STYLING  */
+    /* defines area for the long answer, adds space between it and the submit button */
+    #contact-page textarea{
+    width: 100%;
+    }
+
+    /* defines area for the short answers, adds space between it and the next labels */
+    #contact-page input{
+    width: 90%;
+    }
+    
+    /*  move the form down a bit from the header  */
+    #contact-page main{
+    margin-top: 10%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    /*  make the title bigger on the small screen, put more space above it  */
+    .site-title{
+        width: 90%;
+        margin-top: 15%;
+    }
+    /*  make the subtitle bigger on mobile  */
+    h2{
+        font-size: 90%;
+        margin-bottom: 5%;
+    }
+    /*  make font in the footer smaller  */
+    footer{
+        font-size: 80%;
+    }
+}
+
+                                            /*             KEYFRAME ANIMATION            */
+
+/* fade in animation on the unordered list */
+@keyframes fade-in{
+    0%{
+       opacity: 0; 
+    }
+    
+    100%{
+        opacity: 1;
+    }
+    
+}
+/* animation of the show menu button */
+@keyframes show-menu{
+    0%{
+        transform: rotate(0deg);
+        top: 10px;
+        border-color: grey;
+    }
+    50%{
+        transform: rotate(180deg);
+        height: 30px;
+        top: 10px;
+    }
+    99%{
+        transform: rotate(180deg);
+        height: 0.5px;
+        top: 20px;
+    }
+    
+    100%{
+        top: -1000px;
+        border-color: grey;
+    }
+}
+
+/* animation of the hide menu button first line */
+@keyframes hide-menu-before{
+    49%{
+        top:-1000px;
+    }
+    50%{
+        top: 10px;
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(41deg);
+    }
+}
+
+/* animation of the hide menu button second line  */
+@keyframes hide-menu-after{
+    49%{
+        top:-1000px;
+    }
+    50%{
+        top: 10px;
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-41deg);
+    }
+}
+
+/* animation of the site title, moves back and forth */
+@keyframes swing{
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

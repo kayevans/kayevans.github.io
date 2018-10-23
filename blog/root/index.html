@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Home - Raising a Wild One</title>
+        
+        <!-- link to the main stylesheet -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- icon of the tab  -->
+        <link rel="icon" href="images/crown-logo.png" />
+        <!--    link to slider plugin    -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <!--    jQuery 3.2.1 -->
+        <script
+          src="http://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous">
+        </script>
+        <!--    slider plugin js    -->
+        <script src="js/bootstrap.min.js"></script>
+        <!--    our js file    -->
+        <script src="js/main.js"></script>
+        <!-- HTML5Shiv: Adds HTML5 tags to older IE browsers -->
+        <!--[if lt IE 9]>
+	       <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    
+    
+    <body>
+       
+       <header>
+            <a href="index.html">
+                <img class="site-title" src="images/site-logo.svg" alt="Site logo with title and pink crown in background"/>
+            </a>
+
+            <h2> Motherhood, Lifestyle, Health and Fitness</h2>
+        </header>
+        
+        <nav id="site-nav">
+           <a id="show-menu-button" href="#site-nav"><span>Show Menu</span></a>
+           <a id="hide-menu-button" href="#"><span>Hide Menu</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href=motherhood.html>Motherhood</a></li>
+                <li><a href=lifestyle.html>Lifestyle</a></li>
+                <li><a href=health.html>Health</a></li>
+                <li><a href=Fitness.html>Fitness</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+               
+       
+       
+        <div id="myCarousel" class="carousel slide">
+              <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+              
+              
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img class="img-responsive" src="images/slider1.png" alt="First slide">
+                </div>
+                <div class="item">
+                  <img class="img-responsive" src="images/slide2.png" alt="Second slide">
+                </div>
+                <div class="item">
+                     <a href="contact.html">
+                          <img class="img-responsive" src="images/slide3.png" alt="Third slide">
+                    </a>
+                </div>
+              </div>
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+              </a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+              </a>
+        </div>
+        
+        <ul id='homepagenav'>
+            <li id="motherhoodlink"><a href=motherhood.html>Motherhood</a></li>
+            <li id="lifestylelink"><a href=lifestyle.html>Lifestyle</a></li>
+            <li id="healthlink"><a href=health.html>Health</a></li>
+            <li id="fitnesslink"><a href=Fitness.html>Fitness</a></li>
+        </ul>
+        
+        <footer>
+            <p>&copy; Kay Evans-Stocks & Samantha LaVerde</p>
+        </footer>
+    </body>
+</html>
