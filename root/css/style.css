@@ -1,0 +1,1176 @@
+@import url('https://fonts.googleapis.com/css?family=Mada:200,300,400|Playfair+Display:400,400i|Palanquin:100,300,400');
+
+/* Eric Meyer CSS Reset Begins */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* Eric Meyer CSS Reset Ends */
+
+                        /* DESKTOP AND RESPONSIVE LAYOUT */
+
+/* default font styling */
+body{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.56vw;
+    line-height: 1.5;
+}
+/* set wrapper around elements so that background goes to edge, and centre within */
+h1, h2, h3, p, ul {
+    max-width: 73.4375%;
+    margin: 0 auto;
+}
+
+/* default padding for headings, align to center*/
+h3{
+    text-align: center;
+    padding-top: 0.78125%;
+    padding-bottom: 2.343%;
+}
+
+/* default padding and text indent for paragraphs*/
+p{
+    padding-bottom: 0.78125%;
+    text-indent: 2%;
+}
+
+                    /* TEXT STYLING */
+
+/* font for the headings */
+h1, h2, h3{
+    font-family: 'Mada', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+/* styling of the title of page, percent for responsive */
+h1{
+    font-size: 700%;
+    line-height: 1;
+    padding-top: 11%;
+    margin-left: 37%;
+    
+/*    applies the fade in animation, repeats only once*/
+    -webkit-animation: fadeIn 1s 1;
+    animation: fadeIn 1s 1;
+}
+
+/* styling of the subtitle of page, percent for responsive */
+h2{
+    font-size: 250%;
+    padding-left: 40%;
+    padding-bottom: 5%;
+    
+/*    application of fade in animation on the subtitle, repeats only once, has delay to come in after the title*/
+    -webkit-animation: fadeIn 2s 1;
+    animation: fadeIn 2s 1;
+}
+
+/* size for the headings, percent for responsive */
+h3{
+    font-size: 200%;
+}
+
+/* take away underline for abbreviations and links*/
+abbr, a{
+    text-decoration: none;
+}
+
+/*color of the links*/
+a{
+    color: rgb(216, 184, 0);
+/*    change the z index so that links are able to be clicked on, fixes problem of other sections covering them*/
+    position: relative;
+    z-index: 1;
+}
+
+/* color of the links when hovered*/
+a:hover{
+    color: grey;
+}
+
+                    /* HEADER STYLING */
+
+/* change position relative so that before feature can be positioned to it*/
+.intro{
+    position: relative;
+}
+
+/* styling of the oscar image*/
+.intro::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../images/oscar.svg) no-repeat;
+    /*    background sizing and positioning */
+    height: 40vw;
+    width: 70%;
+    top: 5%;
+    left: 30%;
+    /*  change z index for animation so it is behind summary when it starts */
+    z-index: -1;
+    /*  applies slide up animation to oscar 2s duration */
+    -webkit-animation: slide-up 2s;
+    animation: slide-up 2s;
+}
+
+/* spacing of the summary section and make position relative so that before feature can be positioned to it, makes background white for animation of oscar to hide it when it moves up */
+.summary{
+    background: white;
+    padding-top: 23%;
+    padding-bottom: 10%;
+    position: relative;
+}
+
+/* text styling and sizing of the paragraph in summary */
+.summary p{
+    text-align: center;
+    font-style: italic;
+    width: 50%;
+/*    takes away the default padding on paragraphs */
+    padding-bottom: 0;
+}
+
+/* styling of the first quotation mark */
+.summary::before{
+    content:'"';
+    position: absolute;
+    font-family: 'Palanquin', sans-serif;
+    color: rgb(216, 184, 0);
+    /*    sizing and positioning */
+    font-size: 1500%;
+    font-weight: 100;
+/*    rotate it so that it is the proper quotation mark */
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: 1%;
+    left: 22%;
+}
+
+/* styling of end quotation mark */
+.summary::after{
+    content:'"';
+    position: absolute;
+    font-family: 'Palanquin', sans-serif;
+    color: rgb(216, 184, 0);
+/*    sizing and positioning */
+    font-size: 1500%;
+    font-weight: 100;
+    top: 44%;
+    right: 28%;
+}
+
+
+                    /* PREAMBLE STYLING */
+
+/* style the colors of text and background, add the film roll background*/
+.preamble{
+    background-color: black;
+    color: white;
+    background-image: url(../images/longerfilm.png);
+/*    only repeat on the y axis */
+    background-repeat: repeat-y;
+    background-size: contain;
+/*    animation of the film reel 3s linear to get rid of ease and repeats*/
+    -webkit-animation: film-long 3s linear infinite;
+    animation: film-long 3s linear infinite;
+}
+
+/* allows the after feature to be positioned relative to it*/
+.preamble h3 {
+    position: relative;
+}
+
+/* adds the underline underneath the header */
+.preamble h3::after{
+    content: '';
+    position: absolute;
+    padding-bottom: 5%;
+    top: 25%;
+    left: 36%;
+    width: 30%;
+    border-bottom: 1px white solid; 
+}
+
+/* spacing and sizing for the paragraph */
+.preamble p{
+    width: 50%;
+    margin-left: 13.3%;  
+}
+
+/* applies padding to only last paragraph */
+.preamble p:last-child{
+    padding-bottom: 2.6%;
+}
+
+                    /* EXPLANATION SECTION */
+
+/* aligns the text to the center and applies the tuxedo background */
+.explanation{
+    text-align: center;
+    background: url(../images/tuxedo.png) no-repeat;
+/*    background positioning and sizing */
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+/* styling for the heading, makes position relative so that bow tie image can be positioned to it*/
+.explanation h3{
+    padding-top: 12.5%;
+    position: relative;
+}
+
+/*  styling and spacing for the paragraph */
+.explanation p{
+    padding-top: 9.375%;
+    padding-bottom: 2.1875%;
+    width: 40%;
+    color: white;
+/*    make inline block to position them beside each other and allows to resize*/
+    display: inline-block;
+    text-align: left;
+}
+
+/* applies a margin left to only the last paragraph to position them correctly */
+.explanation p:last-child{
+    margin-left: 2.343%;
+}
+
+/* styling for the bow tie image */
+.explanation h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../images/bow-tie.svg) no-repeat;
+    /*    background positioning and sizing */
+    width: 100%;
+    height: 20vw;
+    background-position: center;
+    top: -20%;
+    
+/*    applies the rubberband animation, last for 3s, makes it repeat*/
+    -webkit-animation: rubberBand 3s infinite;
+    animation: rubberBand 3s infinite;
+}
+
+                    /* PARTICIPATION SECTION */
+
+/* applies the curtain background image */
+.participation{
+    background: url(../images/curtains%203.svg) no-repeat;
+    /*    background positioning and sizing */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+/*  add spacing */
+.participation h3{
+    padding-top: 12.8%;
+}
+
+/* determines the size of the paragraphs */
+.participation p{
+    width: 50%;
+}
+
+/* adds spacing to only last paragaph */
+.participation p:last-child{
+    padding-bottom: 5%;
+}
+
+                    /* BENEFITS SECTION */
+
+/* applies the film reel to background and determines color of section */
+.benefits{
+    background-color: black;
+    color: white;
+    background-image: url(../images/shorterfilm.png);
+    background-repeat: repeat-y;
+    /*    background sizing */
+    background-size: contain;
+    
+/*    applies the animation to film reel, makes it so it repeats */
+    -webkit-animation: film-short 3s infinite linear;
+    animation: film-short 3s infinite linear;
+}
+
+/* styles the paragraph, adds spacing and size */
+.benefits p{
+    text-align: right;
+    width: 50%;
+    margin-right: 13.3%;  
+}
+
+/* adds space to only the bottom paragraph */
+.benefits p:last-child{
+    padding-bottom: 5%;
+}
+
+/* allows the after feature to be positioned relative to the heading */
+.benefits h3{
+    position: relative;
+}
+
+/* adds the underline under the heading */
+.benefits h3::after{
+    content: '';
+    position: absolute;
+    padding-bottom: 4.5%;
+    top: 25%;
+    width: 10%;
+    left: 45%;
+    border-bottom: 1px white solid;
+    
+}
+
+
+                    /*    REQUIREMENTS SECTION */
+
+/* makes the after and before elements relative to this*/
+.requirements{
+    position: relative;
+}
+
+/* spacing for the heading */
+.requirements h3{
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+/* changes color of the links on hover */
+.requirements a:hover{
+    color: black;
+}
+
+/* spacing and size of paragraph */
+.requirements p{
+    width: 50%;
+    margin-right: 5%;
+}
+
+/* adds padding bottom to last paragraph only */
+.requirements p:last-child{
+    padding-bottom: 15%;
+}
+
+/* styling for the girl */
+.requirements::before{
+    content:'';
+    display: block;
+    position: absolute;
+    background: url(../images/lady.svg) no-repeat;
+    background-size: contain;
+    /*  background position and sizing*/
+    width: 40%;
+    height: 70vw;
+    top: 13%;
+    left: 3%;
+    
+    /*  animation for girl  make infinite, 1 second duration*/
+    -webkit-animation: dance 1s infinite alternate linear;
+    animation: dance 1s infinite alternate linear;
+}
+
+/* styling for the carpet image  */
+.requirements::after{
+    content: '';
+    display: block;
+    background: url(../images/carpet.svg) no-repeat;
+    position: absolute;
+/*        background positioning and sizing */
+    top: 68%;
+    left: 5%;
+    height: 100%;
+    width: 95%;
+    
+}
+
+                    /*   LINKS SECTION     */
+
+/* styling of the star links */
+footer{
+    height: 19vw;
+    background-color: black;
+    text-align: center;
+/*    allows the a tags to be positioned beside each other with calculated spacing */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+/* styling and postioning of the a tags */
+footer a{
+    color: black;
+    width: 9.375%;
+    padding-top: 8%;
+/*    adds star background to a tags */
+    background: url(../images/star.svg) no-repeat;
+   /*    background positioning and sizing */
+    background-size: contain;
+    background-position: 0 45%;
+    
+    /* pulse animation on stars */
+    -webkit-animation: pulse 1s infinite linear;
+    animation: pulse 1s infinite linear;
+}
+
+/* changes the color of a tags on hover */
+footer a:hover{
+    color: rgb(198, 25, 15);
+}
+
+                    /* VIEW DESIGNS SECTION */
+
+/* adds spacing and adds envelope background */
+.design-selection{
+    padding-bottom: 30%;
+    text-align: center;
+    background: url(../images/envelope.png) no-repeat;
+/*    background positioning and sizing */
+    background-size: cover;
+    background-position: center;
+}
+
+/* styling for the heading */
+.design-selection h3{
+    padding-top: 3.125%;
+}
+
+/* sizing for the ul */
+.design-selection ul{
+    width: 60.9375%;
+    font-size: 70%;
+/*    makes content fit into 4 columns */
+    -webkit-column-count: 4;
+    column-count: 4;
+}
+
+/* spaces out the li's*/
+.design-selection li{
+    padding-bottom: 15.625%;
+}
+
+/* styling of the first a tags */
+.design-selection a:first-child{
+/*    makes the first a go on seperate line */
+    display: block;
+    text-transform: uppercase;
+    font-size: 110%;
+}
+
+/* makes the font black for the last a tag */
+.design-selection a:last-child{
+    color: black;
+}
+
+/* hides the archives title */
+.archives{
+    display: none;
+}
+
+/* allows nav to be positioned relative to the sidebar div, and closer to design selection area */
+.sidebar{
+    position: relative;
+}
+
+/* styling and sizing for the nav bar, positions relative to the sidebar */
+.design-archives nav{
+    position: absolute;
+    top: 28%;
+    width: 100%;
+}
+
+/* styling and sizing of the ul */
+.design-archives ul{
+    width: 30%;
+/*    makes the two links go beside each other */
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+/* styling and sizing of the li */
+.design-archives li{
+    text-transform: uppercase;
+    font-size: 80%;
+    text-align: center;
+}
+
+                    /* RESOURCES SECTION */
+
+/* coloring of section */
+.zen-resources{
+    background-color:black;
+    color: white;
+/*    relative so that after feature can be positioned to it*/
+    position: relative;
+}
+
+/* spacing of heading */
+.zen-resources h3{
+    padding-top: 3.90625%;
+}
+
+/* makes text white */
+.zen-resources a{
+    color: white;
+}
+
+/* makes the hover grey */
+.zen-resources a:hover{
+    color: grey;
+}
+
+/* spacing of the ul, makes the content split into two columns with gap */
+.zen-resources ul{
+    -webkit-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 3.125%;
+    column-gap: 3.125%;
+    padding-bottom: 18%;
+}
+
+/* the three links on the right text align right to look like credits*/
+.view-css, .css-resources, .zen-faq{
+    text-align: right;
+}
+
+/* the two links of the left make uppercase to look like credits */
+.zen-submit, .zen-translations{
+    text-transform: uppercase;
+}
+
+/* styling of the photo credit at the end */
+.zen-resources::after{
+    content: '\00a9 2017 Photos credited to: Kay Evans, Freepik, Smashicons and Google from www.flaticon.com and Romanov from www.pinterest.ca';
+    position: absolute;
+/*    styling and sizing */
+    color: white;
+    font-size: 70%;
+    top: 75%;
+    left: 20%;
+}
+
+                            /* MOBILE LAYOUT */
+
+@media only screen and (max-width: 400px){
+        /*    DEFAULT FONT AND SPACING */
+    
+    /*   changes the default size for smaller screen */
+    body{
+        font-size: 3.5vw;
+    }
+    /*  removes the default wrapping sizing  */
+    h1, h2, h3, p, ul {
+        max-width: none;
+    }
+    /*  changes the default spacing of the headings  */
+    h3{
+        padding-top: 1.75%;
+        padding-bottom: 2.343%;
+    }
+    /*   changes the default spacing of the paragraphs */
+    p{
+        padding-bottom: 1.75%;
+        text-indent: 5%;
+    }
+    
+        /*    TEXT STYLING */
+    /*  styling and spacing of the title  */
+    h1{
+        font-size: 571.428571%;
+        padding-top: 34%;
+        margin-left: 24.25%;
+    }
+    /*styling and spacing of the subtitle */
+    h2{
+        font-size: 214.285714%;
+        padding-top: 22%;
+        padding-left: 6.25%;
+    }
+    /* default sizing for the headings */
+    h3{
+        font-size: 171.14285%;
+    }
+    
+        /* HEADER STYLING */
+    /* changes the sizing of oscar image */
+    .intro::before{
+        height: 62vw;
+        top: 10%;
+        left: 12%;
+        /*   fixes animation for mobile, changes the duration   */
+        -webkit-animation-name: slide-up-mobile;
+        animation-name: slide-up-mobile;
+        -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+    }
+    /* changes the sizing for summary section */
+    .summary{
+        padding-top: 28%;
+        padding-bottom: 25%;
+    }
+    /*  change size of paragraph */
+    .summary p{
+        width: 75%;
+    }
+    /* changes position of the first quote*/
+    .summary::before{
+        top: -30%;
+        left: 2%;
+    }
+       /* changes position of the first quote*/
+    .summary::after{
+        top: 30%;
+        right:2%;
+    }
+    
+        /* PREAMBLE STYLING */
+    /* changes the background image and the animation to match new sizing   */
+    .preamble{
+        background-image: url(../images/longfilmmobile.png);
+        -webkit-animation-name:  film-long-mobile;
+        animation-name:  film-long-mobile; 
+        -webkit-animation-duration: 6s; 
+        animation-duration: 6s;
+    }
+    /*  styling the postition of header  */
+    .preamble h3{
+        margin-right: 15%;
+        padding-top: 5%;
+        padding-bottom: 12%;
+    }
+    /* styling the line under heading   */
+    .preamble h3::after{
+        top: 45%;
+        width: 41%;
+        left: 33%;
+    }
+    
+    /*  spacing and sizing of the paragraphs  */
+    .preamble p{
+        width: 70%;
+        margin-left: 5%;  
+    }
+    
+    /*  changes the padding to the last paragaph  */
+    .preamble p:last-child{
+        padding-bottom: 5.4%;
+    }
+    
+        /* EXPLANATION SECTION */
+    /*  change background styling and text color  */
+    .explanation{
+        background-image: none;
+        background-color: black;
+        color: white;
+    }
+    /*   changing the positioning of the header  */
+    .explanation h3{
+        padding-top: 34%;
+        padding-bottom: 8%;
+    }
+    /* changing size and position of paragraphs */
+    .explanation p{
+        padding-top: 0;
+        padding-bottom: 4%;
+        width: 72%;
+    }
+    /*  changing the styling and positioning for the last paragraph */
+    .explanation p:last-child{
+        padding-bottom: 5.5%; 
+        margin-left: 0;
+    }
+    
+    /* styling for the bow tie image   */
+    .explanation h3::before{
+    /*  different image for mobile */
+        background-image: url(../images/bowtiemobile.svg);
+        top: 10%;
+    }
+    
+        /* PARTICIPATION SECTION */
+    /*  change background to red color */
+    .participation{
+        background-color: rgb(198, 25, 15);
+        background-image: none;
+    }
+    /* change the spacing of the header*/
+    .participation h3{
+        padding-top: 6%;
+    }
+    
+    /*  change size of paragraph   */
+    .participation p{
+        width: 85%;
+    }
+    
+    /* change padding on bottom of last paragraph only   */
+    .participation p:last-child{
+        padding-bottom: 5.5%;
+    }
+    
+    /*  change color of a to black on hover to look better on red background  */
+    .participation a:hover{
+        color: black;
+    }
+    
+        /* BENEFITS SECTION */
+    /*  change background image for the section  */
+    .benefits{
+        background-image: url(../images/shortfilmmobile.png);
+        
+        /*   change the animation to one for mobile and the ease to suite it better     */
+        -webkit-animation-name: film-short-mobile;
+        animation-name: film-short-mobile;
+        -webkit-animation-duration: 6s;
+        animation-duration: 6s;
+    }
+    
+    /* change the position of the h3*/
+    .benefits h3{
+        padding-top: 5%;
+        padding-bottom: 8%;
+    }
+    
+    /*  change the sizing and position of the paragraph  */
+    .benefits p{
+        width: 78%;
+        margin-right: 4%;  
+    }
+    /*  change the padding on bottom of last paragraph only  */
+    .benefits p:last-child{
+        padding-bottom: 4%;
+    }
+    /*   styling of the line under heading    */
+    .benefits h3::after{
+        top: 43%;
+        width: 15%;
+        left: 43%;
+    }
+    
+        /*    REQUIREMENTS SECTION */
+    /* change the background image to red color   */
+    .requirements{
+        background-color: rgb(198, 25, 15);
+        background-image: none;
+    }
+    
+    /*  change the spacing of header to make room for image  */
+    .requirements h3{
+        padding-top: 97%;
+    }
+    /*  change size of paragraph  */
+    .requirements p{
+        width: 85%;
+    }
+    /*   change the padding bottom on just last paragraph */
+    .requirements p:last-child{
+        padding-bottom: 7%;
+    }
+    
+    /*   change the position and sizing for the lady picture */
+    .requirements::before{
+        width: 50%;
+        height: 85vw;
+        top: 2%;
+        left: 25%;
+    }
+    
+    /*  hides the scroll  */
+    .requirements::after{
+        display: none;
+    }
+
+        /*   LINKS SECTION     */
+    /*  change the size and space for header, make the links go into a column instead of row  */
+    footer{
+        padding-top: 10%;
+/*        changes height so it is the height of the content */
+        height: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    /*  change position and size of the a tags and background stars  */
+    footer a{
+        font-size: 142.857143%;
+        width: 100%;
+        height: 30vw;
+        padding-top: 20%;
+        background-size: auto 60%;
+        background-position: 50% 40%;
+    }
+
+        /* VIEW DESIGNS SECTION */
+    /* changes padding on bottom and takes away background image*/
+    .design-selection{
+        padding-bottom: 17%;
+        background-image: none;
+    }
+    
+    /*  adds extra space to the heading  */
+     .design-selection h3{
+        padding-top: 10%;
+    }
+    
+    /*  changes size and spacing of the ul  */
+    .design-selection ul{
+        padding-top: 3%;
+        width: 100%;
+        font-size: 100%;
+    /*        changes from 4 columns to 2 columns*/
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    /*  changes the spacing on li's  */
+    .design-selection li{
+        padding-bottom: 20%;
+    }
+    
+    /*   makes the design archives nav relative to th archives to easly move */
+    .design-archives{
+        position: relative;
+    }
+    
+    /*  changes the position of nav */
+    .design-archives nav{
+        top: -15vw;
+    }
+    /*  changes width of the ul  */
+     .design-archives ul{
+        width: 80%;
+    }
+    /*  changes font size  */
+    .design-archives li{
+        font-size: 110%;
+    }
+
+        /*     RESOURCES SECTION */
+    /*   changes spacing of heading */
+    .zen-resources h3{
+        padding-top: 12%;
+        padding-bottom: 3%;
+    }
+    
+    /* changes the spacing of the ul   */
+    .zen-resources ul{
+        padding-bottom: 40%;
+    }
+    
+    /*changes the position and styling of the photo credit*/
+    .zen-resources::after{
+        text-align: center;
+        font-size: 80%;
+        top: 80%;
+        width: 80%;
+        left: 10%;
+    }
+    
+}
+
+                /* KEY FRAME ANIMATIONS */
+
+/*    FILM REEL ANIMATIONS */
+
+/* film reel for road to enlightenment section for desktop */
+@-webkit-keyframes film-long{
+/*    initial position set to original (right side)*/
+    from{
+        background-position: 100% 0;
+    }
+/*    final position set to amount relative to height of section for seemless loop*/
+    to{
+        background-position: 100% 34.5vw;
+    }
+}
+@keyframes film-long{
+/*    initial position set to original (right side)*/
+    from{
+        background-position: 100% 0;
+    }
+/*    final position set to amount relative to height of section for seemless loop*/
+    to{
+        background-position: 100% 34.5vw;
+    }
+}
+
+/* film reel for road to enlightenment section for mobile*/
+@-webkit-keyframes film-long-mobile{
+    from{
+        background-position: 100% 0;
+    }
+/*    final position set to amount relative to height of section for seemless loop*/
+    to{
+        background-position: 100% 108vw;
+    }
+}
+@keyframes film-long-mobile{
+    from{
+        background-position: 100% 0;
+    }
+/*    final position set to amount relative to height of section for seemless loop*/
+    to{
+        background-position: 100% 108vw;
+    }
+}
+
+/* film reel for benefits section for desktop*/
+@-webkit-keyframes film-short{
+    from{
+        background-position: 0 0;
+    }
+/*    final position set to amount relative to height for seemless loop */
+    to{
+        background-position: 0 24vw;
+    }
+}
+@keyframes film-short{
+    from{
+        background-position: 0 0;
+    }
+/*    final position set to amount relative to height for seemless loop */
+    to{
+        background-position: 0 24vw;
+    }
+}
+
+/*film reel for benefits section for mobile*/
+@-webkit-keyframes film-short-mobile{
+    from{
+        background-position: 0 0;
+    }
+/*    final position set to amount relative to height for seemless loop*/
+    to{
+        background-position: 0 62.92vw;
+    }
+}
+@keyframes film-short-mobile{
+    from{
+        background-position: 0 0;
+    }
+/*    final position set to amount relative to height for seemless loop*/
+    to{
+        background-position: 0 62.92vw;
+    }
+}
+
+/*     BOW TIE ANIMATION      */
+
+/* makes impression of the bowtie being snapped back and forth */
+@-webkit-keyframes rubberBand {
+      from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+
+      30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+      }
+
+      40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+      }
+
+      50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+      }
+
+      65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1);
+      }
+
+      75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1);
+      }
+
+      to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+}
+@keyframes rubberBand {
+      from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+
+      30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+      }
+
+      40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+      }
+
+      50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+      }
+
+      65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1);
+      }
+
+      75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1);
+      }
+
+      to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+}
+
+/* TITLE ANIMATION */
+
+/* makes the title fade in */
+@-webkit-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50%{
+        opacity: 0;
+    }
+      100% {
+        opacity: 1;
+      }
+}
+@keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50%{
+        opacity: 0;
+    }
+      100% {
+        opacity: 1;
+      }
+}
+
+
+/* STARS ANIMATION */
+/* makes background stars pulse */
+@-webkit-keyframes pulse{
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.08, 1.08, 1.08);
+    transform: scale3d(1.08, 1.08, 1.08);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes pulse{
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.08, 1.08, 1.08);
+    transform: scale3d(1.08, 1.08, 1.08);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+}
+
+/* GIRL ANIMATION */
+/* makes the lady spin */
+
+@-webkit-keyframes dance{
+    from{
+        -webkit-transform:scaleX(-1);
+        transform:scaleX(-1);
+    }
+    to{
+        -webkit-transform:scaleX(1);
+        transform:scaleX(1);
+    }
+}
+
+@keyframes dance{
+    from{
+        -webkit-transform:scaleX(-1);
+        transform:scaleX(-1);
+    }
+    to{
+        -webkit-transform:scaleX(1);
+        transform:scaleX(1);
+    }
+}
+
+
+/* OSCAR ANIMATION */
+/* makes the oscar come from below */
+@-webkit-keyframes slide-up{
+    from{
+        -webkit-transform:translate(0,165%);
+        transform:translate(0,165%);
+    }
+    to{
+        -webkit-transform:translate(0);
+        transform:translate(0);
+    }
+}
+@keyframes slide-up{
+    from{
+        -webkit-transform:translate(0,165%);
+        transform:translate(0,165%);
+    }
+    to{
+        -webkit-transform:translate(0);
+        transform:translate(0);
+    }
+}
+
+/* makes the oscar come from further below for mobile */
+@-webkit-keyframes slide-up-mobile{
+    from{
+        -webkit-transform:translate(0,300%);
+        transform:translate(0,300%);
+    }
+    to{
+        -webkit-transform:translate(0);
+        transform:translate(0);
+    }
+}
+@keyframes slide-up-mobile{
+    from{
+        -webkit-transform:translate(0,300%);
+        transform:translate(0,300%);
+    }
+    to{
+        -webkit-transform:translate(0);
+        transform:translate(0);
+    }
+}
+
+
+
